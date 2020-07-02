@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
-	var s, sep string
-	for i := 1; i < len(os.Args); i++ {
-		s += sep + os.Args[i]
-		sep = " "
+	var builder strings.Builder
+	for index, argument := range os.Args {
+		fmt.Fprintf(&builder, "%d: %s\n", index, argument)
 	}
-	fmt.Println(s)
+	fmt.Println(builder.String())
 }
