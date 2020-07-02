@@ -1,3 +1,4 @@
+// Read from CLA and print in numberd vertical list
 package main
 
 import (
