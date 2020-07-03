@@ -1,3 +1,4 @@
+// Reads input from CL and prints table of repeated entries
 package main
 
 import (
